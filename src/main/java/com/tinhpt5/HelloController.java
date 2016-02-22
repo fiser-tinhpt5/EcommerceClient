@@ -20,9 +20,8 @@ public class HelloController {
 			   throw new RuntimeException("Failed : HTTP error code : "
 				+ response.getStatus());
 		}
-		Product output = response.getEntity(Product.class);
 		String out = response.toString();
-		return output.toString();
+		return out;
 	}
 
 }

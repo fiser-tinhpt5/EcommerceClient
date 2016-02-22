@@ -8,6 +8,20 @@
 <h:body>
 	<h:form>
 		<h:outputLabel value="#{helloController.hello}" />
+
+		<p:growl id="messages" showDetail="true" />
+
+		<p:menuButton value="Options">
+			<p:menuitem value="Save" actionListener="#{menuView.save}"
+				update="messages" icon="ui-icon-disk" />
+			<p:menuitem value="Update" actionListener="#{menuView.update}"
+				update="messages" icon="ui-icon-arrowrefresh-1-w" />
+			<p:menuitem value="Delete" actionListener="#{menuView.delete}"
+				ajax="false" icon="ui-icon-close" />
+			<p:separator />
+			<p:menuitem value="Homepage" url="http://www.primefaces.org"
+				icon="ui-icon-extlink" />
+		</p:menuButton>
 	</h:form>
 </h:body>
 </html>
