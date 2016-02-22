@@ -5,12 +5,14 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui">
 
+<h:head>
+</h:head>
 <h:body>
 	<h:form>
 		<h:outputLabel value="#{helloController.hello}" />
+		<br />
 
 		<p:growl id="messages" showDetail="true" />
-
 		<p:menuButton value="Options">
 			<p:menuitem value="Save" actionListener="#{menuView.save}"
 				update="messages" icon="ui-icon-disk" />
